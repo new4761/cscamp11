@@ -4,10 +4,12 @@
       <v-toolbar-side-icon @click="drawer = !drawer"/>
       <v-toolbar-title v-text="title"/>
     </v-toolbar>
+
     <v-content>
-      <v-container>
-        <nuxt/>
-      </v-container>
+    
+     <Heaer/>
+        <nuxt  v-scroll="checkoffset"/>
+ 
     </v-content>
     <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
       <v-list>
@@ -19,7 +21,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-btn fixed dark fab bottom right color="red" @click="$vuetify.goTo(0)">
+    <v-btn v-show="false" fixed dark fab bottom right color="red" @click="$vuetify.goTo(0) ">
       <v-icon>keyboard_arrow_up</v-icon>
     </v-btn>
     <Footer/>
@@ -31,12 +33,13 @@ import Footer from "~/components/footer.vue";
 import Header from "~/components/header.vue";
 export default {
   components: {
-    Footer
+    Footer,
+    Header
   },
 
   data() {
     return {
-      offsetCurren: 0,
+      test: "run",
       clipped: false,
       drawer: false,
       fixed: false,
@@ -48,9 +51,12 @@ export default {
     };
   },
   methods: {
-    onScroll(e) {
-      console.log(e.target.offsetCurren);
-      // this.offsetCurren = e.target.offsetCurren
+    checkoffset() {
+      console.log(this.$refs.target.scrollTop);
+      this.$refs.target.textContent = this.$refs.target.scrollTop;
+      // console.log(this.$refs.target.scrollHeight);
+
+      //this.$refs.targe;
     }
   }
 };
