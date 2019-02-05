@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 
 const _11171a67 = () => interopDefault(import('..\\pages\\inspire.vue' /* webpackChunkName: "pages_inspire" */))
-const _5e968f56 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages_test" */))
 const _5eb80d9f = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
 Vue.use(Router)
@@ -70,10 +69,6 @@ export function createRouter() {
       path: "/inspire",
       component: _11171a67,
       name: "inspire"
-    }, {
-      path: "/test",
-      component: _5e968f56,
-      name: "test"
     }, {
       path: "/",
       component: _5eb80d9f,

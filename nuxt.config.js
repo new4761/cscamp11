@@ -1,4 +1,5 @@
 const pkg = require('./package')
+import Vue from 'vue'
 
 
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
