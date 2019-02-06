@@ -1,22 +1,24 @@
 <template>
   <v-app dark>
     <v-toolbar :clipped-left="clipped" fixed app>
+      <v-avatar size="60">
+        <img src="../assets/LOGO.png" alt="avatar">
+      </v-avatar>
+        <v-toolbar-title v-text="title"/>
       <v-toolbar-side-icon @click="drawer = !drawer"/>
-      <v-toolbar-title v-text="title"/>
     </v-toolbar>
 
     <v-content>
-    <v-container>
-    
-
-        <nuxt  v-scroll="checkoffset"/>
-         <br> Window height: {{ oldWindowHeight }}
-         </v-container>
+      <v-container grid-list-md fluid ma-0 pa-0>
+        <nuxt v-scroll="checkoffset"/>
+      </v-container>
     </v-content>
-    
-    <!-- <v-btn v-show="false" fixed dark fab bottom right color="red" @click="$vuetify.goTo(0) ">
-      <v-icon>keyboard_arrow_up</v-icon>
-    </v-btn> -->
+    <v-scale-transition>
+      <v-btn v-show="goTopbutton" fixed dark fab bottom right color="red" @click="$vuetify.goTo(0)">
+        <v-icon>keyboard_arrow_up</v-icon>
+      </v-btn>
+    </v-scale-transition>
+
     <Footer/>
   </v-app>
 </template>
@@ -32,8 +34,9 @@ export default {
 
   data() {
     return {
-         //windowWidth: 0,
-      oldWindowHeight: 0,
+      //windowWidth: 0,
+      WindowHeight: 0,
+      goTopbutton: false,
       test: "run",
       clipped: false,
       drawer: false,
@@ -42,26 +45,18 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "Vuetify.js"
+      title: "CSCAMP-11"
     };
   },
-    mounted() {
-
-  },
+  mounted() {},
   methods: {
     checkoffset() {
-     console.log(document.documentElement.scrollTop );
-      // this.$refs.target.textContent = this.getWindowHeight;
-      // console.log(this.$refs.target.scrollHeight);
-
-      //this.$refs.targe;
-    },
-    //  getWindowWidth(event) {
-    //     this.windowWidth = document.documentElement.clientWidth;
-    //   },
-  
-     
-  },
-  
+      this.WindowHeight = document.documentElement.scrollTop;
+      //console.log(document.documentElement.scrollTop);
+      if (this.WindowHeight >= 500) {
+        this.goTopbutton = true;
+      } else this.goTopbutton = false;
+    }
+  }
 };
 </script>
