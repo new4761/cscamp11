@@ -6,24 +6,17 @@
     </v-toolbar>
 
     <v-content>
+    <v-container>
     
-     <Heaer/>
+
         <nuxt  v-scroll="checkoffset"/>
- 
+         <br> Window height: {{ oldWindowHeight }}
+         </v-container>
     </v-content>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-btn v-show="false" fixed dark fab bottom right color="red" @click="$vuetify.goTo(0) ">
+    
+    <!-- <v-btn v-show="false" fixed dark fab bottom right color="red" @click="$vuetify.goTo(0) ">
       <v-icon>keyboard_arrow_up</v-icon>
-    </v-btn>
+    </v-btn> -->
     <Footer/>
   </v-app>
 </template>
@@ -39,6 +32,8 @@ export default {
 
   data() {
     return {
+         //windowWidth: 0,
+      oldWindowHeight: 0,
       test: "run",
       clipped: false,
       drawer: false,
@@ -50,14 +45,23 @@ export default {
       title: "Vuetify.js"
     };
   },
+    mounted() {
+
+  },
   methods: {
     checkoffset() {
-      console.log(this.$refs.target.scrollTop);
-      this.$refs.target.textContent = this.$refs.target.scrollTop;
+     console.log(document.documentElement.scrollTop );
+      // this.$refs.target.textContent = this.getWindowHeight;
       // console.log(this.$refs.target.scrollHeight);
 
       //this.$refs.targe;
-    }
-  }
+    },
+    //  getWindowWidth(event) {
+    //     this.windowWidth = document.documentElement.clientWidth;
+    //   },
+  
+     
+  },
+  
 };
 </script>
