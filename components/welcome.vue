@@ -1,25 +1,46 @@
 <template>
-  <v-parallax height="300" src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg">
-    <v-layout pt-3 align-start justify-space-around row fill-height text-xs-center>
-      <v-flex pa-1>
-        <sponser v-bind:imgSrc="require('~/assets/imgs/temp_spon.png')"/>
-        <sponser v-bind:imgSrc="require('~/assets/imgs/temp_spon.png')"/>
-        <sponser v-bind:imgSrc="require('~/assets/imgs/temp_spon.png')"/>
-      </v-flex>
-      <v-spacer></v-spacer>
-      <v-flex pa-1>
-        <v-scale-transition>
-          <v-img :src="require('~/assets/LOGO.png')"></v-img>
-        </v-scale-transition>
-      </v-flex>
-      <v-spacer></v-spacer>
-      <v-flex pa-1>
-        <sponser v-bind:imgSrc="require('~/assets/imgs/temp_spon.png')"/>
-        <sponser v-bind:imgSrc="require('~/assets/imgs/temp_spon.png')"/>
-        <sponser v-bind:imgSrc="require('~/assets/imgs/temp_spon.png')"/>
-      </v-flex>
-    </v-layout>
-  </v-parallax>
+
+  
+    <v-container fluid grid-list-sm class="headimg" >
+      <v-layout>
+        <v-flex xs5 >
+          <v-img  
+            floating
+            aspect-ratio="1"
+            max-height="400"
+            transition="scale-transition"
+            width="auto"
+            min-height="300"
+            contain
+            :src="require('~/assets/imgs/LOGO.png')"
+            position="center center"
+          ></v-img>
+
+        </v-flex>
+<v-parallax height="auto" contain :src="require('~/assets/imgs/hogwarts.png')">
+        <v-flex xs5 xs12 >
+  
+
+          <v-card-text
+            justify-center
+            align-center
+            class="font-weight-black font-family: 'Mitr', sans-serif"
+            style="font-size:1.3em;"
+          >
+            <h4>ค่ายฝึกอบรมเชิงปฏิบัติการ
+              <br>วิทยาการคอมพิวเตอร์ ครั้งที่ 11
+            </h4>
+           
+            <h6>ภาควิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์
+              <br>สถาบันเทคโนโลยีพระจอมเกล้าคุณทหารลาดกระบัง
+            </h6>
+          </v-card-text>
+ 
+        </v-flex>
+          </v-parallax >
+      </v-layout>
+    </v-container>
+ 
 </template>
 
 <script>
@@ -35,4 +56,12 @@ export default {
   mounted() {},
   methods: {}
 };
+// :style="'-webkit-clip-path: polygon(48% 36%, 100% 0%, 100% 100%, 0% 100%);'"
 </script>
+<style>
+.headimg {
+  background-image: url(../assets/imgs/headertest.svg);
+    background-position: center top;
+    background-size: 100% 100%;
+}
+</style>

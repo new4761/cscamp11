@@ -1,15 +1,26 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Mitr');
+</style>
+
 <template>
   <v-app dark>
-    <v-toolbar :clipped-left="clipped" fixed app>
+     <v-system-bar   scroll-off-screen window white  :clipped-left="clipped" fixed app> 
+      
+      <v-spacer></v-spacer>
+      <v-icon>remove</v-icon>
+      <v-icon>check_box_outline_blank</v-icon>
+      <v-icon>close</v-icon>
+    </v-system-bar>
+    <v-toolbar  white :clipped-left="clipped" fixed app>
       <v-avatar size="60">
-        <img src="../assets/LOGO.png" alt="avatar">
+        <img src="../assets/imgs/LOGO.png" alt="cscamp">
       </v-avatar>
-        <v-toolbar-title v-text="title"/>
+      <v-toolbar-title v-text="title"/>
       <v-toolbar-side-icon @click="drawer = !drawer"/>
     </v-toolbar>
 
     <v-content>
-      <v-container grid-list-md fluid ma-0 pa-0>
+      <v-container style="font-family: 'Mitr', sans-serif" align-content-center fluid ma-0 pa-0>
         <nuxt v-scroll="checkoffset"/>
       </v-container>
     </v-content>
