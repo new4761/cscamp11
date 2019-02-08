@@ -1,6 +1,6 @@
 <template>
   <v-container fluid ma-0 pa-0>
-    <welcome/>
+    <welcome />
     <sponser/>
     <about/>
     <timeline/>

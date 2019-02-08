@@ -1,46 +1,48 @@
 <template>
-
-  
-    <v-container fluid grid-list-sm class="headimg" >
-      <v-layout>
-        <v-flex xs5 >
-          <v-img  
-            floating
-            aspect-ratio="1"
-            max-height="400"
-            transition="scale-transition"
-            width="auto"
-            min-height="300"
-            contain
-            :src="require('~/assets/imgs/LOGO.png')"
-            position="center center"
-          ></v-img>
-
+  <v-parallax    class="Headimg " height="auto" contain :src="require('~/assets/imgs/hogwarts.png')">
+    <v-container fluid grid-list-sm class=".headimg">
+      <v-layout align-center justify-center row fill-height text-xs-left  >
+        <v-flex xs6>
+          <div>
+            <v-img
+              floating
+              aspect-ratio="1"
+              max-height="600"
+              transition="scale-transition"
+              width="auto"
+              min-height="300"
+              contain
+              :src="require('~/assets/imgs/LOGO.png')"
+              position="center right"
+             
+            ></v-img>
+          </div>
         </v-flex>
-<v-parallax height="auto" contain :src="require('~/assets/imgs/hogwarts.png')">
-        <v-flex xs5 xs12 >
-  
+        <v-flex xs6>
+          <div>
+            <v-card color="blue-grey" dark tile flat>
+              <v-card-text
+                justify-center
+                align-center
+                class="thaifont text-truncate"
+                style=" float: right;"
+              >
+                <h4 class="head " contain>ค่ายฝึกอบรมเชิงปฏิบัติการ 
+                  <br>
+                  <p style="text-decoration: underline; ">วิทยาการคอมพิวเตอร์ ครั้งที่ 11</p>
+                </h4>
+                <v-spacer></v-spacer>
 
-          <v-card-text
-            justify-center
-            align-center
-            class="font-weight-black font-family: 'Mitr', sans-serif"
-            style="font-size:1.3em;"
-          >
-            <h4>ค่ายฝึกอบรมเชิงปฏิบัติการ
-              <br>วิทยาการคอมพิวเตอร์ ครั้งที่ 11
-            </h4>
-           
-            <h6>ภาควิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์
-              <br>สถาบันเทคโนโลยีพระจอมเกล้าคุณทหารลาดกระบัง
-            </h6>
-          </v-card-text>
- 
+                <h6 class="sub">ภาควิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์
+                  <br>สถาบันเทคโนโลยีพระจอมเกล้าคุณทหารลาดกระบัง
+                </h6>
+              </v-card-text>
+            </v-card>
+          </div>
         </v-flex>
-          </v-parallax >
       </v-layout>
     </v-container>
- 
+  </v-parallax>
 </template>
 
 <script>
@@ -59,9 +61,11 @@ export default {
 // :style="'-webkit-clip-path: polygon(48% 36%, 100% 0%, 100% 100%, 0% 100%);'"
 </script>
 <style>
+@import "../assets/style/fontthai.css"; /* Using a string */
 .headimg {
   background-image: url(../assets/imgs/headertest.svg);
-    background-position: center top;
-    background-size: 100% 100%;
+  background-position: center top;
+  background-size: 100% 100%;
 }
+
 </style>
