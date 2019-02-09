@@ -2,7 +2,7 @@
   <v-parallax    class="Headimg " height="auto" contain :src="require('~/assets/imgs/hogwarts.png')">
     <v-container fluid grid-list-sm class=".headimg">
       <v-layout align-center justify-center row fill-height text-xs-left  >
-        <v-flex xs6>
+        <v-flex xs5>
           <div>
             <v-img
               floating
@@ -18,7 +18,7 @@
             ></v-img>
           </div>
         </v-flex>
-        <v-flex xs6>
+        <v-flex xs7>
           <div>
             <v-card color="blue-grey" dark tile flat>
               <v-card-text
@@ -46,10 +46,10 @@
 </template>
 
 <script>
-import sponser from "~/components/sponser.vue";
+import sponsor from "~/components/sponsor.vue";
 export default {
   components: {
-    sponser
+    sponsor
   },
 
   data() {

@@ -1,6 +1,8 @@
 const pkg = require('./package')
 import Vue from 'vue'
-
+import InfiniteSlideBar from 'vue-infinite-slide-bar'
+ 
+Vue.component('InfiniteSlideBar', InfiniteSlideBar)
 
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 

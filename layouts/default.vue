@@ -1,17 +1,16 @@
 <style>
-@import url('https://fonts.googleapis.com/css?family=Mitr');
+@import url("https://fonts.googleapis.com/css?family=Mitr");
 </style>
 
-<template>
+<template >
   <v-app dark>
-     <v-system-bar   scroll-off-screen window white  :clipped-left="clipped" fixed app> 
-      
+    <v-system-bar scroll-off-screen window white :clipped-left="clipped" fixed app>
       <v-spacer></v-spacer>
       <v-icon>remove</v-icon>
       <v-icon>check_box_outline_blank</v-icon>
       <v-icon>close</v-icon>
     </v-system-bar>
-    <v-toolbar  white :clipped-left="clipped" fixed app>
+    <v-toolbar white :clipped-left="clipped" fixed app>
       <v-avatar size="60">
         <img src="../assets/imgs/LOGO.png" alt="cscamp">
       </v-avatar>
@@ -30,6 +29,7 @@
       </v-btn>
     </v-scale-transition>
 
+    
     <Footer/>
   </v-app>
 </template>
@@ -37,6 +37,7 @@
 <script>
 import Footer from "~/components/footer.vue";
 import Header from "~/components/header.vue";
+
 export default {
   components: {
     Footer,
@@ -52,6 +53,7 @@ export default {
       clipped: false,
       drawer: false,
       fixed: false,
+     
 
       miniVariant: false,
       right: true,
@@ -61,6 +63,7 @@ export default {
   },
   mounted() {},
   methods: {
+   
     checkoffset() {
       this.WindowHeight = document.documentElement.scrollTop;
       //console.log(document.documentElement.scrollTop);
