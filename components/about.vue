@@ -1,31 +1,7 @@
 <template>
-  <v-container grid-list-sm class=".headimg">
-    <v-layout align-center justify-center row fill-height text-xs-left>
-      <v-flex xs7 offset-sm1>
-        <div>
-          <v-card color="blue-grey" dark tile flat>
-            <v-card-text
-              justify-center
-              align-center
-              class="thaifont text-truncate text-lg-left"
-              style=" float:right;"
-            >
-              <h4 style="font-size:2vw;" contain>
-                <p style="text-decoration: underline; ">CSCAMP คืออะไร</p>
-              </h4>
-              <v-spacer></v-spacer>
-              <h6
-                style="font-size:1vw;"
-              >CS Camp XI หรือ CS Camp ครั้งที่ 11 เป็นค่ายวิทยาการคอมพิวเตอร์ ของภาควิชาวิทยาการคอมพิวเตอร์
-                <br>สถาบันเทคโนโลยี พระจอมเกล้าเจ้าคุณทหารลาดกระบัง โดยภายในค่ายครั้งนี้ จะมีกิจกรรมต่างๆ
-                <br>เพื่อทำให้ผู้เข้าร่วม ได้เข้าใจคำว่า “วิทยาการคอมพิวเตอร์” มากขึ้น พร้อมด้วยคณะอาจารย์ และพี่ๆ
-                <br>ภายในภาควิชา มาให้คำแนะนำผู้เข้าร่วมอย่างดี
-              </h6>
-            </v-card-text>
-          </v-card>
-        </div>
-      </v-flex>
-      <v-flex xs5>
+  <v-container grid-list-sm>
+    <v-layout align-center justify-center row fill-height wrap>
+      <v-flex xs12>
         <div>
           <v-img
             floating
@@ -36,8 +12,27 @@
             min-height="200"
             contain
             :src="require('~/assets/imgs/LOGO.png')"
-            position="center left"
+            position="center center"
           ></v-img>
+        </div>
+      </v-flex>
+      <v-flex xs6 text-xs-center style="padding:2px 2px 2px 2px; min-width:300px;">
+        <div>
+          <v-card flat color="rgb(0,0,0,0)">
+            <v-card-title primary-title>
+              <div>
+                <div
+                  style="border-style:solid; border-color:#01ffff; color:#01ffff;"
+                  class="display-1 thaifont"
+                >เเนะนำค่าย</div>
+                <br>
+                <span
+                  class="title thaifont"
+                  style="color:#b9cbff"
+                >CS Camp XI หรือ CS Camp ครั้งที่ 11 เป็นค่ายวิทยาการคอมพิวเตอร์ ของภาควิชาวิทยาการคอมพิวเตอร์ สถาบันเทคโนโลยี พระจอมเกล้าเจ้าคุณทหารลาดกระบัง โดยภายในค่ายครั้งนี้ จะมีกิจกรรมต่างๆ เพื่อทำให้ผู้เข้าร่วม ได้เข้าใจคำว่า “วิทยาการคอมพิวเตอร์” มากขึ้น พร้อมด้วยคณะอาจารย์ และพี่ๆ ภายในภาควิชา มาให้คำแนะนำผู้เข้าร่วมอย่างดี</span>
+              </div>
+            </v-card-title>
+          </v-card>
         </div>
       </v-flex>
     </v-layout>

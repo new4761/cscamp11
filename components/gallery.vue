@@ -1,30 +1,36 @@
 <template>
- <v-container  justify-center>
-  <v-flex xs12 >
-      </v-flex>
-   </v-container >
+  <v-container justify-center text-xs-center>
+    <v-flex xs10 offset-xs1>
+      <div
+        style="border-style:solid; border-color:#01ffff; color:#01ffff;"
+        class="display-1 thaifont"
+      >ภาพกิจกรรม CSCAMP X (10)</div>
+    </v-flex>
+    <br>
+    <br>
+    <v-spacer></v-spacer>
+    <v-flex xs10 offset-xs1>
+      <v-carousel contain hide-delimiters>
+        <v-carousel-item  contain v-for=" n in imagesmax " :key="n" :src="getImgUrl(n)"></v-carousel-item>
+      </v-carousel>
+    </v-flex>
+  </v-container>
 </template>
 
 
 <script>
-  export default {
-    data () {
-      return {
-        items: [
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
-          }
-        ]
-      }
+export default {
+  data() {
+    return {
+      n: 0,
+      imagesmax: 10
+    };
+  },
+  methods: {
+    getImgUrl(pet) {
+      var images = require.context("../assets/gallery", false, /\.jpg$/);
+      return images("./" + pet + ".jpg");
     }
   }
+};
 </script>

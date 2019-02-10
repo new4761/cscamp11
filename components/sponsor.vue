@@ -1,12 +1,12 @@
 <template>
   <v-layout>
     <v-flex xs12 sm10 offset-sm1 text-xs-center>
-      <v-card flat>
+      <v-card flat color="rgba(0, 0, 0, 0.0)" >
         <v-container grid-list-md fluid>
           <v-layout row wrap>
-            <v-flex xs3 v-for="campkey in Headcampsponsor" :key="campkey">
+            <v-flex xs3 v-for="(campkey,i)  in Headcampsponsor" :key="i">
               <a style=" text-decoration: none;" :href=" campkey.link ">
-                <v-card flat>
+                <v-card  flat color="rgba(0, 0, 0, 0.0)">
                   <v-img
                     transition="fade-transition"
                     :src=" getImgUrl(campkey.src)"
@@ -30,25 +30,25 @@ export default {
       Headcampsponsor: [
         {
           //cscamp
-          src: "LOGO.png",
+          src: "cs",
           name: "CSCAMP-11 SPONSOR",
           link: "https://www.cs-camp.net/"
         },
         {
           //cscamp
-          src: "LOGO.png",
+          src: "cs",
           name: "CSCAMP-11 SPONSOR",
           link: "https://www.cs-camp.net/"
         },
         {
           //cscamp
-          src: "LOGO.png",
+          src: "cscamp",
           name: "CSCAMP-11 SPONSOR",
           link: "https://www.cs-camp.net/"
         },
         {
           //cscamp
-          src: "LOGO.png",
+          src: "demo",
           name: "CSCAMP-11 SPONSOR",
           link: "https://www.cs-camp.net/"
         }
@@ -57,8 +57,8 @@ export default {
   },
   methods: {
     getImgUrl(pet) {
-      var images = require.context("../assets/imgs", false);
-      return images("./" + pet);
+      var images = require.context("../assets/sponsor/big", false, /\.png$/);
+      return images("./" + pet+ ".png");
     }
   }
 };

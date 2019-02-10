@@ -1,22 +1,38 @@
 <template>
   <v-layout>
     <v-flex xs12 sm10 offset-sm1 text-xs-center>
-      <v-card flat>
+      <br>
+      <br>
+
+     <div
+        style="border-style:solid; border-color:#01ffff; color:#01ffff;"
+        class="display-1 thaifont"
+      >กำหนดการ</div>
+      <br>
+      <br>
+      <v-card flat color="rgba(255, 255, 255, 0.1)">
         <v-container grid-list-md fluid>
           <v-layout row wrap>
-            <v-flex xs3 v-for="campkey in Headcampsponsor" :key="campkey">
-              <a style=" text-decoration: none;" :href=" campkey.link ">
-                <v-card flat>
-                  <v-img
-                    transition="fade-transition"
-                    :src=" getImgUrl(campkey.src)"
-                    contain
-                    :alt=" campkey.name"
-                    height="200px"
-                  ></v-img>
-                </v-card>
-              </a>
+            <v-flex xs3 v-for="(campkey,i) in Headcampsponsor" :key="i" wrap>
+              <v-card flat color="rgba(0, 0, 0, 0.0)">
+                <div :style="{color:campkey.color,}" class="subheading thaifont">{{campkey.note}}</div>
+                <br>
+                <v-img
+                  transition="fade-transition"
+                  :src=" getImgu(campkey.src)"
+                  contain
+                  height="10vw"
+                ></v-img>
+                <br>
+                <div :style="{color:campkey.color,}" class="subheading thaifont">
+                  เริ่ม {{campkey.DateS}}
+                  <br>
+                  หมดเขต {{campkey.DateE}}
+                </div>
+              </v-card>
             </v-flex>
+            <br>
+            <br>
           </v-layout>
         </v-container>
       </v-card>
@@ -30,34 +46,42 @@ export default {
       Headcampsponsor: [
         {
           //cscamp
-          src: "LOGO.png",
-          name: "CSCAMP-11 SPONSOR",
-          link: "https://www.cs-camp.net/"
+          src: "regis.png",
+          note: "ประกาศรับสมัคร",
+          color: "#00ff00",
+          DateS: "12/3/2019",
+          DateE: "12/3/2019"
         },
         {
           //cscamp
-          src: "LOGO.png",
-          name: "CSCAMP-11 SPONSOR",
-          link: "https://www.cs-camp.net/"
+          src: "anw.png",
+          note: "ประกาศผลการคัดเลือก",
+          color: "#e4ff00",
+          DateS: "12/3/2019",
+          DateE: "12/3/2019"
         },
         {
           //cscamp
-          src: "LOGO.png",
-          name: "CSCAMP-11 SPONSOR",
-          link: "https://www.cs-camp.net/"
+          src: "vali.png",
+          note: "ยืนยันสิทธิ์",
+          color: "#ff9c00",
+          DateS: "12/3/2019",
+          DateE: "12/3/2019"
         },
         {
           //cscamp
-          src: "LOGO.png",
-          name: "CSCAMP-11 SPONSOR",
-          link: "https://www.cs-camp.net/"
+          src: "come.png",
+          note: "เดินทางสู่ CSCAMP",
+          color: "#ff1e00",
+          DateS: "12/3/2019",
+          DateE: "12/3/2019"
         }
       ]
     };
   },
   methods: {
-    getImgUrl(pet) {
-      var images = require.context("../assets/imgs", false);
+    getImgu(pet) {
+      var images = require.context("../assets/timeline", false);
       return images("./" + pet);
     }
   }

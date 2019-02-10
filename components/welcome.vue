@@ -1,48 +1,52 @@
 <template>
-  <v-parallax    class="Headimg " height="auto" contain :src="require('~/assets/imgs/hogwarts.png')">
-    <v-container fluid grid-list-sm class=".headimg">
-      <v-layout align-center justify-center row fill-height text-xs-left  >
-        <v-flex xs5>
-          <div>
-            <v-img
-              floating
-              aspect-ratio="1"
-              max-height="600"
-              transition="scale-transition"
-              width="auto"
-              min-height="300"
-              contain
-              :src="require('~/assets/imgs/LOGO.png')"
-              position="center right"
-             
-            ></v-img>
-          </div>
-        </v-flex>
-        <v-flex xs7>
-          <div>
-            <v-card color="blue-grey" dark tile flat>
-              <v-card-text
-                justify-center
-                align-center
-                class="thaifont text-truncate"
-                style=" float: right;"
-              >
-                <h4 class="head " contain>ค่ายฝึกอบรมเชิงปฏิบัติการ 
-                  <br>
-                  <p style="text-decoration: underline; ">วิทยาการคอมพิวเตอร์ ครั้งที่ 11</p>
-                </h4>
-                <v-spacer></v-spacer>
+  <v-container fluid>
+    <v-layout align-center justify-center row text-xs-left>
+      <v-flex xs12>
+        <div>
+          <v-img
+            floating
+            aspect-ratio="1"
+            max-height="500"
+            transition="scale-transition"
+            width="auto"
+            min-height="300"
+            contain
+            :src="require('~/assets/imgs/LOGO.png')"
+            position="center right"
+          ></v-img>
+        </div>
+      </v-flex>
+      <v-flex xs12>
+        <div>
+          <v-card
+            flat
+            justify-center
+            align-center
+            class="thaifont"
+            style="float: left;text-align:center;   word-wrap: break-word; border-style:solid; border-color:#01ffff; "
+            color="rgb(255,255,255,0.3)"
+          >
+            <v-card-text style="background-color:#01ffff;">
+              <span
+                class="thaifont"
+                style="color:#00073e; font-size:3vw;"
+                contain
+              >ค่ายฝึกอบรมเชิงปฏิบัติการ
+                <br>วิทยาการคอมพิวเตอร์ ครั้งที่ 11
+              </span>
+            </v-card-text>
 
-                <h6 class="sub">ภาควิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์
-                  <br>สถาบันเทคโนโลยีพระจอมเกล้าคุณทหารลาดกระบัง
-                </h6>
-              </v-card-text>
-            </v-card>
-          </div>
-        </v-flex>
-      </v-layout>
-    </v-container>
-  </v-parallax>
+            <v-divider style="heigh:20px"></v-divider>
+            <v-card-text>
+              <h6 style="color:#ffff; font-size:1.8vw;">ภาควิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์
+                <br>สถาบันเทคโนโลยีพระจอมเกล้าคุณทหารลาดกระบัง
+              </h6>
+            </v-card-text>
+          </v-card>
+        </div>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
@@ -61,11 +65,9 @@ export default {
 // :style="'-webkit-clip-path: polygon(48% 36%, 100% 0%, 100% 100%, 0% 100%);'"
 </script>
 <style>
-@import "../assets/style/fontthai.css"; /* Using a string */
-.headimg {
-  background-image: url(../assets/imgs/headertest.svg);
-  background-position: center top;
-  background-size: 100% 100%;
+@import "../assets/style/fontthai.css";
+.headerimg {
+  width: 100%;
+  height: auto;
 }
-
 </style>

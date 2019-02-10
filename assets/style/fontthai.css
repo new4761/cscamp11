@@ -1,17 +1,48 @@
 .thaifont {
-    font-family: 'Mitr', sans-serif !important
+  font-family: "Mitr", sans-serif !important;
 }
 .thaifont .head {
-    font-size:3vw;
-  
+  font-size: 3vw;
 }
 .thaifont .sub {
-    color: #d3d3d3;
-    font-size:1.3vw;
-    
+  color: #d3d3d3;
+  font-size: 1.3vw;
 }
 
-.Headimg{
-    -webkit-clip-path: polygon(58% 0, 73% 15%, 100% 23%, 100% 62%, 92% 90%, 48% 90%, 0 99%, 0 0);
-    clip-path: polygon(58% 0, 73% 15%, 100% 23%, 100% 62%, 92% 90%, 48% 90%, 0 99%, 0 0);
+.Headimg {
+  height: auto;
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 30%,
+    100% 89%,
+    69% 96%,
+    36% 96%,
+    0 100%,
+    0% 30%
+  );
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 30%,
+    100% 89%,
+    69% 96%,
+    36% 96%,
+    0 100%,
+    0% 30%
+  );
+  min-height: 300px;
+  max-height: 550px;
+}
+.aboutimg {
+  height: auto;
+
+  min-height: 300px;
+  max-height: 550px;
+}
+@media screen and (max-width: 600px) {
+  .Headimg {
+    min-height: 300px;
+    max-height: 350px;
+  }
 }
