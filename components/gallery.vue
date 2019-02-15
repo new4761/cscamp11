@@ -9,9 +9,9 @@
     <br>
     <br>
     <v-spacer></v-spacer>
-    <v-flex xs10 offset-xs1>
-      <v-carousel contain hide-delimiters>
-        <v-carousel-item  contain v-for=" n in imagesmax " :key="n" :src="getImgUrl(n)"></v-carousel-item>
+    <v-flex  flat xs10 offset-xs1>
+      <v-carousel flat  hide-delimiters hide-controls>
+        <v-carousel-item   v-for=" n in imagesmax " :key="n" :src="getImgUrl(n)"></v-carousel-item>
       </v-carousel>
     </v-flex>
   </v-container>

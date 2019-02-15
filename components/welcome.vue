@@ -24,7 +24,7 @@
             align-center
             class="thaifont"
             style="float: left;text-align:center;   word-wrap: break-word; border-style:solid; border-color:#01ffff; "
-            color="rgb(255,255,255,0.3)"
+            color="rgb(255,255,255,0.1)"
           >
             <v-card-text style="background-color:#01ffff;">
               <span
@@ -45,8 +45,11 @@
           </v-card>
         </div>
       </v-flex>
+      
     </v-layout>
+    
   </v-container>
+  
 </template>
 
 <script>

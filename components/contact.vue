@@ -16,13 +16,26 @@
             </div>
           </v-card-title>
 
-          <v-card-text
-            class="subheading font-weight-bold text-sm-left thaifont"
-            style="text-align:left;"
-          >- สถานที่จัดค่าย : 3 ถนน ฉลองกรุง แขวง ลำปลาทิว เขต ลาดกระบัง กรุงเทพมหานคร 1052
-            <br>- Email:kmitlcscamp@gmail.com
-            <br>- Phone:xxxxx-xxxxx
-          </v-card-text>
+          <v-expansion-panel focusable>
+            <v-expansion-panel-content
+              v-for="(pathMap,i) in pathMap"
+              :key="i"
+              :prepend-icon="pathMap.icon"
+              style="background-color:rgba(255, 0, 0, 0.0 ); "
+            >
+              <div style="color:#01ffff;  " slot="header">
+                <v-icon style="color:#01ffff;">{{pathMap.icon}}</v-icon>
+                {{ pathMap.name }}
+              </div>
+              <v-card
+                v-for=" more in pathMap.more"
+                :key="more.text"
+                style="background-color:#018989 ;"
+              >
+                <v-card-text>{{ more.text }}</v-card-text>
+              </v-card>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
         </v-card>
       </v-flex>
       <v-flex xs12 align-center justify-center>
@@ -44,6 +57,56 @@
     </v-layout>
   </v-container>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      pathMap: [
+        {
+          //cscamp
+
+          name: "สถานที่จัดค่าย ",
+          more: [
+            {
+              text:
+                "3 ถนน ฉลองกรุง แขวง ลำปลาทิว เขต ลาดกระบัง กรุงเทพมหานคร 10520 "
+            }
+          ],
+          show: false,
+          icon: "location_on"
+        },
+             {
+          //cscamp
+
+          name: "Email ",
+          more: [
+            {
+              text:
+                "kmitlcscamp@gmail.com"
+            }
+          ],
+          show: false,
+          icon: "mail"
+        },
+        {
+          //cscamp
+
+          name: "Phone",
+          more: [
+            {
+              text:
+                "พี่อู๋ 090-638-9907"
+            }
+          ],
+          show: false,
+          icon: "call"
+        }
+      ]
+    };
+  }
+};
+</script>
+
  <style>
 @import "../assets/style/fontthai.css";
 .mapouter {

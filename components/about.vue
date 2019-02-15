@@ -16,10 +16,10 @@
           ></v-img>
         </div>
       </v-flex>
-      <v-flex xs6 text-xs-center style="padding:2px 2px 2px 2px; min-width:300px;">
+      <v-flex xs12 text-xs-center style="padding:2px 2px 2px 2px; min-width:300px;">
         <div>
           <v-card flat color="rgb(0,0,0,0)">
-            <v-card-title primary-title>
+            <v-card-title >
               <div>
                 <div
                   style="border-style:solid; border-color:#01ffff; color:#01ffff;"

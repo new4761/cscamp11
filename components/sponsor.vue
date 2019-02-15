@@ -48,7 +48,7 @@ export default {
         },
         {
           //cscamp
-          src: "demo",
+          src: "cscamp",
           name: "CSCAMP-11 SPONSOR",
           link: "https://www.cs-camp.net/"
         }
@@ -67,3 +67,4 @@ export default {
 @import "../assets/style/sponser.css"; /* Using a string */
 </style>
 
+  

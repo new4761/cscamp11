@@ -48,7 +48,7 @@ export default {
         },
         {
           //cscamp
-          src: "demo",
+          src: "cscamp",
           name: "CSCAMP-11 SPONSOR",
           link: "https://www.cs-camp.net/"
         },
@@ -72,7 +72,7 @@ export default {
         },
         {
           //cscamp
-          src: "demo",
+          src: "cscamp",
           name: "CSCAMP-11 SPONSOR",
           link: "https://www.cs-camp.net/"
         }

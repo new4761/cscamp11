@@ -1,50 +1,40 @@
 <template>
-  <v-container fluid grid-list-xl>
-    <v-flex xs12 sm8 offset-sm2 text-xs-center>
+  <v-container fill-height fluid grid-list-xl>
+    <v-flex
+      xs12
+      sm8
+      offset-sm2
+      text-xs-center
+      style="border-style:solid; border-color:#01ffff; color:#01ffff;"
+    >
       <v-flex xs12>
-        <div
-          style="border-style:solid; border-color:#01ffff; color:#01ffff;"
-          class="display-1 thaifont"
-        >วิธีการเดินทางมายังค่าย</div>
+        <br>
+        <div class="display-1 thaifont">วิธีการเดินทางมายังค่าย</div>
       </v-flex>
       <br>
-      <v-layout column wrap justify-center>
-        <v-flex xs8 sm2 v-for="(pathMap,i) in pathMap" :key="i">
-          <v-card
-            flat
-            color="rgba(255, 255, 255,0)"
-            class="px-0"
-            style="border-style:solid; border-color:#006a6a;"
-          >
-            <v-card-title primary-title style="height:30px">
-              <div>
-                <div style="color:#00c6c6; " class="subheading thaifont">
-                  <v-icon style="color:#00c6c6;" left>{{pathMap.icon}}</v-icon>
-                  {{pathMap.name}}
-                </div>
-              </div>
-              <v-spacer></v-spacer>
-              <v-btn style="color:#00c6c6; " icon @click=" pathMap.show = !pathMap.show ">
-                <v-icon>{{ pathMap.show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
-              </v-btn>
-            </v-card-title>
-            <v-card-actions></v-card-actions>
 
-            <v-slide-y-transition>
-              <v-card-text style="background-color:rgba(30, 30, 30,1);" v-show="pathMap.show">
-                <ul style="text-align:left;">
-                  <div v-for=" more in pathMap.more" :key="more.text">
-                    <li>{{ more.text }}</li>
-                  </div>
-                </ul>
-              </v-card-text>
-            </v-slide-y-transition>
+      <v-expansion-panel focusable>
+        <v-expansion-panel-content
+          v-for="(pathMap,i) in pathMap"
+          :key="i"
+          :prepend-icon="pathMap.icon"
+          style="background-color:rgba(255, 0, 0, 0.0 ); "
+        >
+          <div style="color:#01ffff;  " slot="header">
+            <v-icon style="color:#01ffff;">{{pathMap.icon}}</v-icon>
+            {{ pathMap.name }}
+          </div>
+          <v-card v-for=" more in pathMap.more" :key="more.text" style="background-color:#018989 ;">
+            <v-card-text>{{ more.text }}</v-card-text>
           </v-card>
-        </v-flex>
-      </v-layout>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
     </v-flex>
   </v-container>
 </template>
+<style>
+</style>
+
 <script>
 export default {
   data: () => ({
