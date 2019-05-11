@@ -1,5 +1,5 @@
 <template style="background-color:#000;">
-  <v-system-bar window white :clipped-left="clipped" fixed app >
+  <v-system-bar window white  fixed app >
      <v-menu class="hidden-md-and-up">
 
         <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
@@ -54,6 +54,9 @@
 
       </div>
     <v-spacer></v-spacer>
+     
+
+  
   </v-system-bar>
   
 </template>

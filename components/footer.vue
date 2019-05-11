@@ -39,43 +39,62 @@ export default {
   data() {
     return {
       campsponsor: [
-        {
+         {
           //cscamp
-          src: "cs",
-          name: "CS-KMITL",
-          link: "https://www.cs-camp.net/"
+          src: "Refinitiv",
+          name: "Refinitiv",
+          link: "https://www.refinitiv.com/en"
         },
         {
           //cscamp
-          src: "cs",
-          name: "CS-KMITL",
-          link: "https://www.cs-camp.net/"
+          src: "news",
+          name: "krobkruakao3",
+          link: "http://www.krobkruakao3.org/"
         },
         {
           //cscamp
-          src: "cscamp",
-          name: "CSCAMP-11 SPONSOR",
-          link: "https://www.cs-camp.net/"
+          src: "borntodev",
+          name: "borntodev",
+          link: "https://www.borntodev.com/"
         },
-        {
+          {
           //cscamp
-          src: "demo",
-          name: "DEMO TEXT",
-          link: "https://www.cs-camp.net/"
+          src: "Krungsri",
+          name: "Krungsri",
+          link: "https://www.krungsri.com/bank/th/home.html"
         },
-        {
+  {
           //cscamp
-          src: "cs",
-          name: "CS-KMITL",
-          link: "https://www.cs-camp.net/"
+          src: "ican",
+          name: "YES I  CAN",
+          link: "#"
         },
-        {
+          {
           //cscamp
-          src: "cs",
-          name: "CS-KMITL",
-          link: "https://www.cs-camp.net/"
+          src: "lactasoy",
+          name: "lactasoy",
+          link: "https://www.lactasoy.com/th/"
         },
 
+        {
+          //cscamp
+          src: "thaibev",
+          name: "thaibev",
+          link: "http://www.thaibev.com/"
+        },
+         {
+          //cscamp
+          src: "eisa",
+          name: "eisa",
+          link: "http://www.thaibev.com/"
+        },
+        {
+          //cscamp
+          src: "orc",
+          name: "ORCSOFT",
+          link: "https://orcsoft.co.th/"
+        },
+      
       ]
     };
   },

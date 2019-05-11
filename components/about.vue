@@ -18,7 +18,7 @@
       </v-flex>
       <v-flex xs12 text-xs-center style="padding:2px 2px 2px 2px; min-width:300px;">
         <div>
-          <v-card flat color="rgb(0,0,0,0)">
+          <v-card flat color="rgb(0,0,0,0)" style=" background-color:rgba(0,0,0,0) !important;">
             <v-card-title >
               <div>
                 <div
@@ -31,8 +31,11 @@
                   style="color:#b9cbff"
                 >CS Camp XI หรือ CS Camp ครั้งที่ 11 เป็นค่ายวิทยาการคอมพิวเตอร์ ของภาควิชาวิทยาการคอมพิวเตอร์ สถาบันเทคโนโลยี พระจอมเกล้าเจ้าคุณทหารลาดกระบัง โดยภายในค่ายครั้งนี้ จะมีกิจกรรมต่างๆ เพื่อทำให้ผู้เข้าร่วม ได้เข้าใจคำว่า “วิทยาการคอมพิวเตอร์” มากขึ้น พร้อมด้วยคณะอาจารย์ และพี่ๆ ภายในภาควิชา มาให้คำแนะนำผู้เข้าร่วมอย่างดี</span>
               </div>
+              
             </v-card-title>
+            
           </v-card>
+          
         </div>
       </v-flex>
     </v-layout>

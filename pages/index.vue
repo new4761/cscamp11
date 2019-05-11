@@ -1,22 +1,27 @@
 <template>
   <v-container fluid ma-0 pa-0>
     <Headbar/>
+
     <!-- <img src="../assets/imgs/windowbar.png" class="headerimg"> -->
     <v-parallax :src="require('~/assets/imgs/609.jpg')" class="Headimg">
-      <welcome id="regis"/>
+      <welcome/>
     </v-parallax>
-     <v-img width="100%" height="100" :src="require('~/assets/imgs/imgcut4.png')"></v-img>
 
     <div style=" background-image: linear-gradient(#001b1d, #00375e);">
+      <v-img width="100%" height="100" :src="require('~/assets/imgs/imgcut4.png')"></v-img>
+      <regis id="regis"/>
+      <dia></dia>
+       
       <sponsor/>
+<namelist/>
       <about id="about"/>
-  
- <v-img width="100%" height="200" :src="require('~/assets/imgs/imgcut5.png')"></v-img>
+      <v-img width="100%" height="200" :src="require('~/assets/imgs/imgcut3.png')"></v-img>
+
       <timeline id="date"/>
     </div>
     <v-img width="100%" height="100" :src="require('~/assets/imgs/imgcut1.png')"></v-img>
 
-    <div style=" background-image: linear-gradient( #001b2e, #000c15); ">
+    <div style=" background-image: linear-gradient( #001b2e, #002948); ">
       <br>
       <br>
       <gallery/>
@@ -27,10 +32,16 @@
   </v-container>
 </template>
 
-
+<style>
+@import url("https://fonts.googleapis.com/css?family=Mitr:300");
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
+</style>
 
 
 <script>
+import namelist from "~/components/namelist.vue";
+import dia from "~/components/dia.vue";
+import regis from "~/components/regis.vue";
 import Headbar from "~/components/header.vue";
 import welcome from "~/components/welcome.vue";
 import sponsor from "~/components/sponsor.vue";
@@ -45,6 +56,9 @@ import allsponsor from "~/components/allsponsor.vue";
 
 export default {
   components: {
+    namelist,
+    dia,
+    regis,
     Headbar,
     welcome,
     sponsor,
@@ -57,6 +71,11 @@ export default {
     //  Logo,
     // VuetifyLogo
   },
-  methods: {}
+  methods: {},
+  data() {
+    return {
+      dialog: false
+    };
+  }
 };
 </script>

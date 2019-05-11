@@ -10,8 +10,25 @@
         >
           <v-card-title>
             <div>
-              <div justify-center style="color:#00c6c6; " class="headline thaifont">
-                <v-icon style="color:#00c6c6;" large left>call</v-icon>ช่องทางการติดต่อ
+              <div style="color:#01ffff; " class="headline thaifont" fill-height>
+                <v-icon style="color:#01ffff;" medium left>call</v-icon>
+                ช่องทางการติดต่อ
+             
+                <v-btn href="https://www.instagram.com/explore/tags/cscampkmitl/" class=" yellow--text" flat  small  fab color="rgba(0,0,0,0)">
+                  <v-icon medium>fab fa-instagram</v-icon>
+                </v-btn>
+
+                <v-btn  href="https://twitter.com/cskmitlcamp" class=" light-blue--text"  flat small fab color="rgba(0,0,0,0)">
+                  <v-icon medium>fab fa-twitter</v-icon>
+                </v-btn>
+
+                <v-btn  href="https://www.facebook.com/cskmitl.camp" class=" indigo--text" flat small  fab color="rgba(0,0,0,0)">
+                  <v-icon medium>fab fa-facebook</v-icon>
+                </v-btn>
+
+                <v-btn  href="https://www.youtube.com/channel/UCpoJjasrlLVNyMJyhFLvUFw" class=" red--text" flat small  fab color="rgba(0,0,0,0)">
+                  <v-icon medium>fab fa-youtube</v-icon>
+                </v-btn>
               </div>
             </div>
           </v-card-title>
@@ -37,6 +54,9 @@
             </v-expansion-panel-content>
           </v-expansion-panel>
         </v-card>
+        <v-flex class="divcom">
+          <br>
+        </v-flex>
       </v-flex>
       <v-flex xs12 align-center justify-center>
         <div class="mapouter">
@@ -75,14 +95,13 @@ export default {
           show: false,
           icon: "location_on"
         },
-             {
+        {
           //cscamp
 
           name: "Email ",
           more: [
             {
-              text:
-                "kmitlcscamp@gmail.com"
+              text: "kmitlcscamp@gmail.com"
             }
           ],
           show: false,
@@ -94,8 +113,7 @@ export default {
           name: "Phone",
           more: [
             {
-              text:
-                "พี่อู๋ 090-638-9907"
+              text: "พี่อู๋ 090-638-9907"
             }
           ],
           show: false,

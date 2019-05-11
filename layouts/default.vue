@@ -1,14 +1,15 @@
 <style>
 @import url("https://fonts.googleapis.com/css?family=Mitr:300");
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
 </style>
 
 <template  >
   <v-app dark style=" font-family: 'Mitr', sans-serif !important;">
-  
+
 
     <v-content>
-      <v-container style="font-family: 'Mitr', sans-serif" align-content-center fluid ma-0 pa-0>
-        <nuxt v-scroll="checkoffset" style="background-color:#001b1d;"/>
+      <v-container style="font-family: 'Mitr', sans-serif !important;" align-content-center fluid ma-0 pa-0>
+        <nuxt v-scroll="checkoffset" style="background-color:#001b1d; font-family: 'Mitr', sans-serif !important;"/>
       </v-container>
     </v-content>
     <v-scale-transition>
@@ -43,8 +44,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "CSCAMP-11",
-   
+      title: "CSCAMP-11"
     };
   },
   mounted() {},
@@ -59,3 +59,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.divcom {
+ background-color:rgba(0,0,0,0) !important;
+}
+</style>
