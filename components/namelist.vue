@@ -16,27 +16,31 @@
           </h1>
         </v-card-text>
       </v-card>
-      <v-layout justify-space-between row wrap>
-        <v-flex xs4 v-for="(run,i)  in info" :key="i">
+      <v-container grid-list-md fluid>
+      <v-layout  row wrap>
+    
+        <v-flex sm4 v-for="(run,i)  in info" :key="i">
           <v-btn
-            max-width="200px"
             class="thaifont"
             outline
             v-if="run[2]==1"
             color="green accent-3"
-            style="min-width:300px;"
+             style="min-width:200px;"
+           small
           >{{run[0]}} {{run[1]}}</v-btn>
           
           <v-btn
-            max-width="200px"
+             small
             class="thaifont"
             outline
            v-else
             color="amber lighten-1"
-            style="min-width:300px;"
+           style="min-width:200px;"
           >{{run[0]}} {{run[1]}}</v-btn>
         </v-flex>
+       
       </v-layout>
+      </v-container>
     </v-flex>
 
     <br>
